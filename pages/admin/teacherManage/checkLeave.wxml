@@ -1,0 +1,51 @@
+<!--pages/admin/teacherManage/checkLeave.wxml-->
+
+<!--pages/teacher/classManage/editWork.wxml-->
+<view class="weui-tab">
+  <view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  </view>
+  <view class="weui-tab__panel">
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+<view class="weui-panel" wx:for="{{homeworkList}}" wx:key>
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">教师名称：{{item.teacherName}}</view>
+            <view class="weui-media-box__title weui-media-box__title_in-text ">辞职原因：{{item.reason}}</view>
+            <view class="kb"></view>
+            <view class="weui-media-box__info">
+              <view class="weui-media-box__desc">提交时间：{{item.submitTime}}</view>
+              <view class="weui-media-box__desc margin-top">离职时间：{{item.leaveTime}}</view>
+              <view class="weui-media-box__info__meta" id="join">
+                <button class="cu-btn bg-{{item.color}}" data-item='{{item}}' loading="{{item.loading}}">{{item.score}}</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+      <view class="weui-panel" wx:for="{{unhomeworkList}}" wx:key>
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">教师名称：{{item.teacherName}}</view>
+            <view class="weui-media-box__title weui-media-box__title_in-text " >辞职原因：{{item.reason}}</view>
+            <view class="kb"></view>
+            <view class="weui-media-box__info">
+              <view class="weui-media-box__desc">提交时间：{{item.submitTime}}</view>
+              <view class="weui-media-box__desc margin-top">离职时间：{{item.leaveTime}}</view>
+              <view class="weui-media-box__info__meta" id="join">
+                <button class="cu-btn bg-{{item.color}}" data-item='{{item}}' loading="{{item.loading}}">{{item.score}}</button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

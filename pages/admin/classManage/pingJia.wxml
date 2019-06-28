@@ -1,0 +1,16 @@
+<!--pages/admin/classManage/pingJia.wxml-->
+<view class="weui-panel" wx:for="{{classList}}" wx:key>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.className}}</view>
+           <view class="weui-media-box__desc ">评价内容:{{item.explain}}</view>
+          <view class="weui-media-box__desc margin-top">评价时间:{{item.eveTime}}</view>
+           <view class="kb"></view>
+          <view class="weui-media-box__info">
+            
+            <view class="weui-media-box__info__meta" id="join"><button class="cu-btn bg-red"bindtap="deleteClass" data-item='{{item}}' data-index='{{index}}'loading="{{item.loading}}">{{item.title}}</button></view>
+          </view>
+        </view>
+      </view>
+    </view>
+

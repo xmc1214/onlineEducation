@@ -1,0 +1,80 @@
+<!--pages/admin/classManage/classManage.wxml-->
+<view class="page">
+<view class='page__bd'>
+ <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput" style="padding-top:0;">
+                        <icon type="clear" size="14"></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14"></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn text-blue" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+<view class="weui-panel" wx:for="{{classList}}" wx:key bindtap='openPinjia'>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.className}}<text class='text-red'style="float:right">￥{{item.price}} </text></view>
+            <view class="weui-media-box__desc">课程专业：{{item.teacherName}}</view>
+          <view class="weui-media-box__desc margin-top">上课时间：{{item.eveTime}}</view>
+           <view class="kb"></view>
+          <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta">最大容量：{{item.personNum}}</view>
+            <view class="weui-media-box__info__meta" id="join"><button class="cu-btn bg-red"bindtap="deleteClass" data-item='{{item}}' data-index='{{index}}'loading="{{item.loading}}">{{item.title}}</button></view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+</view>
+<view class="action text-gray add-action" id='add'>
+      <button class="cu-btn icon-add bg-blue shadow " bindtap='addClassroom'></button>
+    </view>
+    <view class="cu-modal {{isShow}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">创建课程</view>
+      <view class="action" bindtap='hideModal'>
+        <text class="icon-close text-red"></text>
+      </view>
+    </view>
+    <view class="flex flex-wrap justify-center">
+      <view class="cu-form-group margin-top basis-xl solid-bottom">
+        <view class="title">课程名称</view>
+        <input placeholder="请输入课程名称" bindinput='getClassName' value='{{classItem.className}}'></input>
+      </view>
+      <view class="basis-df"></view>
+      <view class="cu-form-group  basis-xl">
+        <view class="title">课程专业</view>
+        <input placeholder="请输入课程专业" bindinput='getTeacherName'value="{{classItem.teacherName}}"></input>
+      </view>
+     
+      <view class="cu-form-group  basis-xl">
+        <view class="title">上课时间</view>
+        <input placeholder="请输入上课时间" bindinput='getTime' value="{{classItem.everyTime}}"></input>
+      </view>
+     <view class="cu-form-group  basis-xl">
+        <view class="title">课程价格</view>
+        <input placeholder="请输入课程价格" bindinput='getPrice' value="{{classItem.price}}"></input>
+      </view>
+      <view class="cu-form-group margin-bottom basis-xl">
+        <view class="title">最大容量</view>
+        <input placeholder="请输入最大容量" bindinput='getMaxNumber'value="{{classItem.personNum}}"></input>
+      </view>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-blue text-blue" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-blue margin-left" bindtap="hideModalAndAddClassroom">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>
+

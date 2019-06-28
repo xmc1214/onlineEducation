@@ -1,0 +1,11 @@
+<!--pages/admin/teacherManage/teacherManage.wxml-->
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>
+<view class="cu-list menu sm-border card-menu margin-top">
+<view class="cu-item margin-top"wx:for="{{functionList}}" wx:key>
+      <navigator class="content" hover-class="none" url="{{item.url}}" open-type="navigate">
+        <text class="text-grey">{{item.name}}</text>
+      </navigator>
+    </view>
+</view>

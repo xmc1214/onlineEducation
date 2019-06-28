@@ -1,0 +1,5 @@
+/* pages/admin/scoreManage/scoreManage.wxss */
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

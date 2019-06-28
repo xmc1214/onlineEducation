@@ -1,0 +1,29 @@
+<!--pages/teacher/onlineClass/onlineClass.wxml-->
+<view class="cu-modal {{isShow}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">教师上课登录</view>
+      <view class="action" bindtap="goback">
+        <text class="icon-close text-red"></text>
+      </view>
+    </view>
+    <view class="flex flex-wrap justify-center">
+      <view class="cu-form-group margin-top basis-xl solid-bottom">
+        <view class="title">账号</view>
+        <input placeholder="请输入账号"></input>
+      </view>
+      <view class="basis-df"></view>
+      <view class="cu-form-group margin-bottom basis-xl">
+        <view class="title">密码</view>
+        <input placeholder="请输入密码"></input>
+      </view>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-blue text-blue" bindtap="goback">取消</button>
+        <button class="cu-btn bg-blue margin-left" bindtap="hideModal">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>

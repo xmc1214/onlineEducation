@@ -1,0 +1,33 @@
+/* pages/student/classManage/classMessage.wxss */
+
+.weui-cells{
+  margin-top: 80rpx;
+  text-align: left;
+}
+.weui-label{
+  width: 5em;
+}
+
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+.page-body {
+  padding: 20rpx 0;
+}
+
+.btn-area{
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+}
+.radio {
+    display: block;
+    
+    padding: 5px;
+}
+
+
+.tc{
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+/* pages/admin/classroomManage/classroomManage.wxss */
+#add{
+  position: fixed;
+  right: 50rpx;
+  bottom: 200rpx;
+}

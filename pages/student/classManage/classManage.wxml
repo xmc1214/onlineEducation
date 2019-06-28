@@ -1,0 +1,15 @@
+<!--pages/student/classManage/classManage.wxml-->
+<view class='page'>
+<view class='kb'></view>
+<view class='page__bd'>
+<view class="weui-cells weui-cells_after-title" wx:for="{{moduleList}}" wx:key bindtap='openModule' data-item='{{item}}'>
+            <view class="weui-cell">
+             <text class="icon-title text-{{item.color}}"></text>
+                <view class="weui-cell__bd">{{item.module}}</view>
+                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+              <view class='kb'></view>
+        </view>
+      
+</view>
+</view>

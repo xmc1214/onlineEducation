@@ -1,0 +1,44 @@
+<!--pages/student/classManage/classMessage.wxml-->
+ <view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="icon-title text-blue"></text>课后回顾
+   
+  </view>  
+</view>
+<view class="page-body">
+  <view class="page-section tc padding solid bg-white">
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback" danmu-list="{{danmuList}}" controls title="{{title}}" bindfullscreenchange="fullscreenchange"></video>
+    </view>
+    </view>
+    <view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="icon-title text-blue"></text>课后作业
+   
+  </view>  
+  <text class=" text-{{color}} text-right padding">成绩:{{score}}</text>
+</view>
+<view class="padding bg-white" wx:for="{{workList}}" wx:key>
+  <view class="text-left padding">{{item.problem}}</view>
+   <radio-group class="block" wx:for="{{item.anwser}}"wx:key  bindchange="radioChange" wx:for-item="ite" wx:for-index="idx" data-truely="{{item.truely}}" data-idx="{{idx}}" data-index="{{index}}">
+    <view class="cu-form-group bg-{{ite.bgColor}} light">
+      <view>
+        <radio class="blue margin-left-sm light" value="{{ite.message}}"  checked="{{ite.isCheck}}"></radio>
+        {{ite.message}}
+      </view>
+    </view>
+  </radio-group>
+ <!-- <view class="page">
+    <view class="page__bd" wx:for="{{item.anwser}}"wx:key>
+        <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+                <radio class="radio" value="{{item.message}}" checked="{{item.isCheck}}">
+                    <text>{{item.message}}</text>
+                </radio>
+            </radio-group>
+        </view>
+    </view>
+</view> -->
+</view>
+<view class="padding flex flex-direction margin-top">
+  <button class="cu-btn bg-{{statusColor}} margin-tb-sm lg" bindtap='submit'>{{status}}</button>
+</view>

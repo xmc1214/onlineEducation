@@ -1,0 +1,19 @@
+<!--pages/student/classManage/chaKan.wxml-->
+<!--pages/student/classManage/selectedClass.wxml-->
+<view class="page">
+  <view class='page__bd'>
+  <view class='kb'>
+  </view>
+    <view class="weui-panel" wx:for="{{classList}}" wx:key bindtap='openClassHome'>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.className}}
+          </view>
+          <view class="weui-media-box__desc margin-top">授课教师：{{item.teacherName}}</view>
+          <view class="weui-media-box__desc margin-top">上课时间：{{item.planStartDate}}~{{item.planEndDate}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

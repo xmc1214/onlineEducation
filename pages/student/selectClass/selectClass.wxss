@@ -1,0 +1,17 @@
+/* pages/student/selectClass/selectClass.wxss */
+#join{
+   position:absolute;
+   right: 10rpx;
+  bottom: 30rpx;
+ 
+}
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-cell{
+    padding: 12px 15px 12px 35px;
+}

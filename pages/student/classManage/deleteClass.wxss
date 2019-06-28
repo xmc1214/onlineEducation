@@ -1,0 +1,7 @@
+/* pages/student/classManage/deleteClass.wxss */
+#join{
+   position:absolute;
+   right: 30rpx;
+  bottom: 30rpx;
+ 
+}

@@ -1,0 +1,22 @@
+<!--pages/teacher/classManage/changeList.wxml-->
+<!--pages/student/classManage/changeList.wxml-->
+<view class="kb"></view>
+ <view class="weui-panel margin-top" wx:for="{{leaveList}}" wx:key>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{item.reason}}</view>
+          
+           <view class="weui-media-box__desc">课程名称：{{item.type}}</view>
+            <view class="weui-media-box__desc margin-top">交换人姓名：{{item.changename}}</view>
+            <view class="weui-media-box__desc margin-top">调课前时间：{{item.beforeTime}}</view>
+            <view class="weui-media-box__desc margin-top">调课前时间：{{item.afterTime}}</view>
+           <view class="kb"></view>
+          <view class="weui-media-box__info">
+          <view class="weui-media-box__info__meta">{{item.failReason}}</view>
+            <view class="weui-media-box__info__meta" id="join"><button class="cu-btn bg-{{item.color}}" data-item='{{item}}' loading="{{item.loading}}">{{item.title}}</button></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+

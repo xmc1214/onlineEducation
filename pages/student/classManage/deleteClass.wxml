@@ -1,0 +1,38 @@
+<!--pages/student/classManage/deleteClass.wxml-->
+<view class="weui-tab">
+  <view class="weui-navbar">
+    <block wx:for="{{tabs}}" wx:key="*this">
+      <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+        <view class="weui-navbar__title">{{item}}</view>
+      </view>
+    </block>
+    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+  </view>
+  <view class="weui-tab__panel">
+    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+     
+    </view>
+    <view class="weui-tab__content" hidden="{{activeIndex != 1}}"> <view class="page">
+        <view class='page__bd'>
+          <view class="weui-panel" wx:for="{{classList}}" wx:key>
+            <view class="weui-panel__bd">
+              <view class="weui-media-box weui-media-box_text">
+                <view class="weui-media-box__title weui-media-box__title_in-text">{{item.className}}
+                  <text class='text-red' style="float:right">￥{{item.price}} </text>
+                </view>
+                <view class="weui-media-box__desc">上课时间：{{item.planStartDate}}~{{item.planEndDate}}</view>
+                <view class="kb"></view>
+                <view class="weui-media-box__info">
+                  <view class="weui-media-box__info__meta">最大容量：{{item.personNum}}</view>
+                  <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">已选人数：{{item.personChooseNum}}</view>
+                  <view class="weui-media-box__info__meta" id="join">
+                    <button class="cu-btn bg-blue">退课成功</button>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view></view>
+  </view>
+</view>

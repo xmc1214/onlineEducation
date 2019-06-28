@@ -1,0 +1,15 @@
+<loading hidden="{{hidden}}">
+  加载中...
+</loading>
+<view class="bg-img padding-tb-xl " style="background-image: url('http://wx4.sinaimg.cn/mw690/006UdlVNgy1g2v3jee7prj30u018zdnn.jpg');height:100vh;">
+ <view class="flex padding justify-center">
+ <view class="padding-xl text-white">
+    <view class="padding-xs text-xxl text-orange">
+    互联网教学管理平台
+    </view>
+    <view class="padding-xs text-orange">
+     Internet Teaching Management Platform 
+    </view>
+  </view>
+    </view>
+</view>

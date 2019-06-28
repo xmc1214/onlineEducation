@@ -1,0 +1,18 @@
+/* pages/student/classManage/classDetail.wxss */
+#join{
+   position:absolute;
+   right: 10rpx;
+  bottom: 30rpx;
+ 
+}
+/* .weui-cells{
+  margin-top: 80rpx;
+  text-align: left;
+}
+.weui-label{
+  width: 5em;
+}
+
+.page-body-button {
+  margin-bottom: 30rpx;
+} */
